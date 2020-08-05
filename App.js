@@ -1,4 +1,3 @@
-/*This is an Example of Facebook Login*/
 import React, { Component } from 'react';
 import { View, StyleSheet, Text, Alert, Image } from 'react-native';
 import {
@@ -11,7 +10,7 @@ import {
 export default class App extends Component {
   constructor() {
     super();
-    //Setting the state for the data after login
+    
     this.state = {
       user_name: '',
       token: '',
@@ -21,7 +20,7 @@ export default class App extends Component {
 
   get_Response_Info = (error, result) => {
     if (error) {
-      //Alert for the Error
+     
       Alert.alert('Error fetching data: ' + error.toString());
     } else {
       //response alert
@@ -33,7 +32,7 @@ export default class App extends Component {
   };
 
   onLogout = () => {
-    //Clear the state after logout
+ 
     this.setState({ user_name: null, token: null, profile_pic: null });
   };
 
